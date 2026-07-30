@@ -21,6 +21,12 @@ for `github.com` in `~/.ssh/config`).
   local edits unpushed.
 - **On explicit request** - "push my changes", "push mywork", "sync to github",
   "commit and push".
+- **Automatically at the end of every Copilot CLI session**, via a
+  `sessionEnd` hook (`..\..\hooks\session-end-push-mywork.json`, registered in
+  `~\.copilot\hooks\` through the same directory junction used by the other
+  hooks). This is a safety net that catches any pending edits that weren't
+  explicitly pushed mid-session. Manual/explicit runs above are still useful
+  when the user wants an immediate push instead of waiting for session end.
 
 ## How to run it
 ```powershell

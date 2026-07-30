@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionEnd": [
+      {
+        "type": "command",
+        "powershell": "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\Kasun.Rathnayaka\\OneDrive - TOWER New Zealand Limited\\Documents\\GitHub\\mywork\\copilot-daily\\tools\\Push-MyWorkChanges.ps1\"",
+        "timeoutSec": 60
+      }
+    ]
+  }
+}

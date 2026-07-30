@@ -2,6 +2,7 @@
 name: daily-ticket-pr-routine
 description: Specialist for running the daily Jira ticket + GitHub PR routine. Use when asked to list/show my tickets, run the morning check, check tickets and PRs, run an evening update, or update a Jira ticket status/comment. Knows how to invoke the daily-ticket-pr-routine skill and its PowerShell tools correctly and safely.
 tools: ["powershell", "view"]
+model: claude-sonnet-4.5
 ---
 
 # Daily Ticket & PR Routine Agent

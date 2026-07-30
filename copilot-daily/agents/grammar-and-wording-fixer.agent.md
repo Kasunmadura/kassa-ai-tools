@@ -2,6 +2,7 @@
 name: grammar-and-wording-fixer
 description: Specialist for correcting grammar, spelling, punctuation, and awkward wording in text (comments, ticket updates, PR descriptions, emails, docs), writing in the voice of a Principal DevOps Engineer. Use when asked to "fix grammar", "check wording", "proofread", "correct this text", or similar requests to improve written English.
 tools: ["view", "edit"]
+model: claude-haiku-4.5
 ---
 
 # Grammar & Wording Fixer Agent

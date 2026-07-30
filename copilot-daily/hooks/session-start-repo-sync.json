@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "type": "command",
+        "powershell": "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\Kasun.Rathnayaka\\OneDrive - TOWER New Zealand Limited\\Documents\\GitHub\\mywork\\copilot-daily\\hooks\\Invoke-SessionStartRepoSync.ps1\"",
+        "timeoutSec": 120
+      }
+    ]
+  }
+}

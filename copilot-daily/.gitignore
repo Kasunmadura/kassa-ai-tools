@@ -1,0 +1,28 @@
+# Never commit anything that could hold a real secret/token.
+# This project stores credentials only in environment variables (JIRA_PAT,
+# JIRA_BASE_URL) — never in files — but this list is a safety net in case
+# that ever changes or someone adds a local override file.
+
+.env
+.env.*
+*.env
+*secret*
+*token*
+*credentials*
+*.pat
+local.settings.json
+appsettings.*.json
+!appsettings.Sample.json
+
+# The prep/ folder's scripts are safe to commit (no secrets inside them) —
+# but never let a stray copy of the local secrets file end up here.
+secrets.env
+**/secrets.env
+prep/secrets.env
+**/.jira-daily/
+!prep/secrets.env.example
+
+# Common local override / scratch files
+*.local.ps1
+*.local.json
+notes.md

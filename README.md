@@ -1,9 +1,30 @@
 # kassa-ai-tools
 
-Personal GitHub Copilot CLI toolkit that automates my daily Jira ticket
-management and GitHub PR/repo workflow — built as proper Copilot CLI
-**skills**, **agents**, **instructions**, and **hooks**, not just loose
-scripts.
+This repo is my personal **GitHub Copilot CLI toolkit** for running the two
+things I do every single working day — chasing Jira tickets and keeping on
+top of GitHub pull requests — without having to remember a dozen manual
+steps or re-explain the same context to Copilot every session.
+
+Instead of a folder of ad-hoc scripts, everything here is wired into
+Copilot CLI's own extension points:
+
+- **Skills** — step-by-step playbooks that tell Copilot *when* and *how* to
+  run a tool (e.g. "when asked for a morning check, run these two scripts in
+  this order").
+- **Agents** — named subagents (`daily-ticket-pr-routine`,
+  `grammar-and-wording-fixer`) that own a whole task end-to-end, each pinned
+  to the model best suited to it (fast/cheap for mechanical work, stronger
+  reasoning for judgment calls).
+- **Instructions** — always-on guardrails Copilot must never violate, such
+  as refusing to move or comment on Backlog/To Do Jira tickets.
+- **Hooks** — automation that fires on its own at session start/end (sync
+  all my repos before I start working, push anything left uncommitted when
+  the session ends).
+- **Tools** — the actual PowerShell scripts that talk to Jira and GitHub.
+
+The net effect: I open Copilot CLI, say "run morning check" or "update
+CHA-1234", and it handles the Jira/GitHub mechanics itself using the rules
+and scripts defined in this repo — consistently, the same way, every time.
 
 ## What's in here
 
